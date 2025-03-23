@@ -154,60 +154,131 @@ Miftah.show();
 
 
 
-// ERROR HANDLING IN DART 
+// BASIC ERROR HANDLING IN DART 
 // USING TRY AND CATCH 
 
 
-import "dart:io";
+// import "dart:io";
 
-class BankingSystem{
+// class BankingSystem{
 
 
 
-void Banker(){
+// void Banker(){
 
-  stdout.writeln("welcome to miftah commercial banking(MCB) ");
-  stdout.writeln("enter the amount of initial balance ");
-  String? initial_balance_input = stdin.readLineSync();
+//   stdout.writeln("welcome to miftah commercial banking(MCB) ");
+//   stdout.writeln("enter the amount of initial balance ");
+//   String? initial_balance_input = stdin.readLineSync();
 
   
-  stdout.writeln("enter the amount of withdrawal ");
-  String? withdrawal_amount_input = stdin.readLineSync();
+//   stdout.writeln("enter the amount of withdrawal ");
+//   String? withdrawal_amount_input = stdin.readLineSync();
 
-try{
+// try{
 
-if(initial_balance_input != null && withdrawal_amount_input != null){
+// if(initial_balance_input != null && withdrawal_amount_input != null){
 
-      int initial_balance = int.parse(initial_balance_input);
-      int withdrawal_amount = int.parse(withdrawal_amount_input);
-       print("your initial balance is $initial_balance\nand your withdrawal request is $withdrawal_amount");
+//       int initial_balance = int.parse(initial_balance_input);
+//       int withdrawal_amount = int.parse(withdrawal_amount_input);
+//        print("your initial balance is $initial_balance\nand your withdrawal request is $withdrawal_amount");
 
-       if(withdrawal_amount < initial_balance){
+//        if(withdrawal_amount < initial_balance){
 
-        // print(initial_balance - withdrawal_amount);
-        print("you made a withdrawal of $withdrawal_amount and your initial balance is now ${initial_balance - withdrawal_amount} \nthank you for choosing MCB");
+//         // print(initial_balance - withdrawal_amount);
+//         print("you made a withdrawal of $withdrawal_amount and your initial balance is now ${initial_balance - withdrawal_amount} \nthank you for choosing MCB");
 
-       }else{
-        print("unable to do the transaction ,you withdrawal request is larger that your initial balance.");
+//        }else{
+//         print("unable to do the transaction ,you withdrawal request is larger that your initial balance.");
        
-       }
-    }
+//        }
+//     }
 
-}catch (e){
-  if(initial_balance_input != null && withdrawal_amount_input != null){
-    print("null input is not suppoted, please change your input and rerun the program");
-  }
-}
+// }catch (e){
+//   if(initial_balance_input != null && withdrawal_amount_input != null){
+//     print("null input is not suppoted, please change your input and rerun the program");
+//   }
+// }
 
-}
+// }
   
-}
+// }
 
-void main(){
-var transaction1 = BankingSystem();
-transaction1.Banker();
-}
-
-
+// void main(){
+// var transaction1 = BankingSystem();
+// transaction1.Banker();
+// }
 
 
+
+
+
+//ADVANCED ERROR HANDLING CONCEPT -CUSTOM EXCEPTION CREATING 
+
+
+// class DepositError implements Exception{
+  
+//   errormessage(){
+//     print("can not deposit less than 0");
+//   }
+
+// }
+
+// void deposit(int amount){
+//     if(amount < 0){
+//       throw DepositError();
+//     }else{
+//       print("you deposited $amount to your account");
+//     }
+      
+
+// }
+
+
+// void main(){
+// try{
+
+// deposit(-20);
+// }on Exception catch (e){
+//   if (e is DepositError) {
+//     e.errormessage();
+//   }
+// }
+
+// }
+
+
+
+
+// class ZeroDivisionEroor implements Exception{
+//   String message;
+
+//   ZeroDivisionEroor(this.message);
+
+//   void ErrorMesssage(){
+//     print(message);
+
+//   }
+
+//   @override
+//   String toString() => "InvalidDividingError : $message";
+
+// }
+
+// void divide(int a,int b){
+// if(b == 0){
+//   throw ZeroDivisionEroor("can not divide a number by zero");
+// }else{
+//   print(a/b);
+// }
+// }
+
+// void main(){
+//   try{
+//     divide(10, 0);
+// }
+// on Exception catch (e){
+//   if(e is ZeroDivisionEroor){
+//     e.ErrorMesssage();
+//   }
+// }
+// }
