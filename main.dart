@@ -282,3 +282,56 @@ Miftah.show();
 //   }
 // }
 // }
+
+
+
+
+
+
+
+
+
+
+// erroe handling 
+// import 'dart:io';
+
+// class inputerror implements Exception{
+
+//   error(){
+//     print("can not insert null");
+//   }
+
+
+// }
+
+// void acceptor(){
+//   stdout.writeln("enter any thing oyu want");
+// String? data = stdin.readLineSync();
+// if (data == "null"){
+//   throw inputerror();
+// } else{
+//   print("you entered $data");
+// }
+// }
+
+
+// void main(){
+
+// try{
+//   acceptor();
+// }on Exception catch (e){
+//   if(e is inputerror){
+//     print(e.error());
+//   }
+// }
+// }
+import 'dart.dart';
+
+
+
+
+
+
+
+
+
