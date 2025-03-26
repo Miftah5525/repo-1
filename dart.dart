@@ -10,42 +10,32 @@ in this file the following concepts will be seen
 
 */
 
-
-
 class authenticator{
 
   String? name;
   int? age;
-  int? _password;
+  String _password;
 
   authenticator(this.name,this.age,this._password);
 
-void showe(){
+
+String get password => _password;
+
+
+void show(){
   print('name of user $name \nage of user is $age');
 
 }
 
-void set passwordchanger(int newpassword){
-     if(newpassword.toString().length < 5){
-      print("too sjort to be passwordm, at least 6 characters");
-     }else{
-      _password = newpassword;
-      print("password updated successfuly");
-     }
+set password(String newpassword){
 
+  if(newpassword.length >= 6){
+
+    _password = newpassword;
+     print("password changed successfuly");
+  }else{
+    print("password must be at least 6 characters");
+  }
 }
 
-// int? get password{return _password ;}
-
-
-
-}
-
-void main(){
-
-authenticator user1 = authenticator("miftah", 23, 112233);
-
-user1.showe();
-
-print(user1._password);
 }

@@ -325,7 +325,30 @@ Miftah.show();
 //   }
 // }
 // }
+
+
+
+
+
+
+
+
+
+// encapsulation with dart.dart file 
+
+
+
 import 'dart.dart';
+
+void main(){
+  authenticator user1  = authenticator("miftah",23, "998800");
+
+  user1.show();
+  print("password for user1 is ${user1.password}");
+
+
+   user1.password = "666666";
+}
 
 
 
