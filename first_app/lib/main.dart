@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
     return   const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Threebuttons(),
+
     );
   }
 }
@@ -31,21 +32,15 @@ class Threebuttons extends StatelessWidget {
         fontWeight: FontWeight.bold,
         fontSize: Checkbox.width,
       ),
-      
-      
-        
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
         items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
         BottomNavigationBarItem(icon:Icon(Icons.settings), label: 'settings'),
-        
         ],
         ),
       backgroundColor: Colors.white,
       );
-      
-    
      }
 }
